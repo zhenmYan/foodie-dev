@@ -19,7 +19,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource                # 数据源类型：HikariCP
     driver-class-name: com.mysql.cj.jdbc.Driver             # 数据源的相关配置
-    url: jdbc:mysql://localhost:3306/foodie-shop-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    url: jdbc:mysql://localhost:3306/foodie-shop-dev?useInicode=true&characterEncideing=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 123
     hikari:
@@ -51,7 +51,7 @@ mybatis:
 # 通用 Mapper 配置
 mapper:
   # 指定要扫描的 mapper 接口
-  mappers: cn.mrcode.foodiedev.my.mapper.MyMapper
+  mappers: com.imooc.my.mapper.MyMapper
   # 在进行数据库操作的时候，判断表达式  username != null, 是否追加 username != ''
   # 这里关闭了追加，自己手写
   not-empty: false
