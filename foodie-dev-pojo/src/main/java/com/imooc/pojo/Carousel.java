@@ -3,6 +3,7 @@ package com.imooc.pojo;
 import javax.persistence.*;
 import java.util.Date;
 
+
 public class Carousel {
     /**
      * 主键
