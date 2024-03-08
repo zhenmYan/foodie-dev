@@ -10,11 +10,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>foodie-dev-common</module>
-        <module>foodie-dev-pojo</module>
-        <module>foodie-dev-mapper</module>
-        <module>foodie-dev-service</module>
-        <module>foodie-dev-api</module>
+        <module>foodie-common</module>
+        <module>foodie-pojo</module>
+        <module>foodie-mapper</module>
+        <module>foodie-service</module>
+        <module>foodie-api</module>
     </modules>
 
 
