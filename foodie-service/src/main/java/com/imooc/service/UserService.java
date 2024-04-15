@@ -1,5 +1,8 @@
 package com.imooc.service;
 
+import com.imooc.pojo.User;
+import com.imooc.pojo.bo.UserBo;
+
 /**
  * description:
  *
@@ -14,5 +17,7 @@ public interface UserService {
      * @return
      */
     boolean queryUserNameExist(String userName);
+
+    User createUser(UserBo userBo);
 
 }
