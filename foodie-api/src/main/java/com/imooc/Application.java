@@ -2,6 +2,7 @@ package com.imooc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
@@ -10,7 +11,10 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @author 颜真明
  * @date 2023/6/13  17:17
  */
-@SpringBootApplication
+@SpringBootApplication(
+        scanBasePackages = {"com.imooc", "idworker"},
+        exclude = {SecurityAutoConfiguration.class}
+)
 @MapperScan(basePackages = "com.imooc.mapper")
 public class Application {
 

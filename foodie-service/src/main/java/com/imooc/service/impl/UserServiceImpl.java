@@ -7,7 +7,7 @@ import com.imooc.pojo.bo.UserBo;
 import com.imooc.service.UserService;
 import com.imooc.util.DateUtil;
 import com.imooc.util.MD5Utils;
-import org.springframework.beans.factory.annotation.Autowired;
+import idworker.Sid;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UsersMapper usersMapper;
 
-    @Autowired
+    @Resource
     private Sid sid;
 
     @Override
@@ -45,8 +45,8 @@ public class UserServiceImpl implements UserService {
         return null != result;
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public User createUser(UserBo userBO) {
         User users = new User();
         users.setUsername(userBO.getUsername());
@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
             e.printStackTrace();
         }
         // 使用 ID 生成器生成 ID
-//        users.setId(sid.nextShort());
+        users.setId(sid.nextShort());
         // 默认同用户昵称一样
         users.setNickname(userBO.getUsername());
         // 设置用户默认头像
@@ -85,5 +85,17 @@ public class UserServiceImpl implements UserService {
 //        Users result = usersMapper.selectOneByExample(example);
 //        return result;
 //    }
+
+    @Override
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public User queryUserForLogin(String username, String passwod) {
+        Example example = new Example(User.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("username", username);
+        criteria.andEqualTo("password", passwod);
+
+        User result = usersMapper.selectOneByExample(example);
+        return result;
+    }
 
 }

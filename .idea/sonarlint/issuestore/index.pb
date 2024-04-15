@@ -19,8 +19,6 @@ p
 @foodie-mapper/src/main/java/com/imooc/mapper/ItemsImgMapper.java,c\3\c35a5175d78986e999712b51e74b4c1d2ac2d471
 p
 @foodie-mapper/src/main/java/com/imooc/mapper/CategoryMapper.java,3\3\3300269f595aa3681445a04755b46193d730809d
-B
-foodie-api/pom.xml,0\c\0c25c3b0f86b68e7cb1505d2fc5a3d24057bd365
 f
 6foodie-pojo/src/main/java/com/imooc/pojo/Category.java,4\7\47c8763dafd3849af998d8b3d0321af0116d3125
 h
@@ -59,13 +57,7 @@ f
 6foodie-pojo/src/main/java/com/imooc/pojo/ItemsImg.java,9\0\908d44b63cb4dc7bf01114265196344f1905a2ac
 E
 foodie-mapper/pom.xml,2\4\24b049afc08fe8e3aadbe7915d65062b18cb71c3
-r
-Bfoodie-api/src/main/java/com/imooc/controller/HelloController.java,0\c\0cdb851cc8ba055a1ef9b9a1eabecd1e30ab5b8c
 p
 @foodie-api/src/main/java/com/imooc/controller/StuController.java,d\2\d25a7657f88843b153b4eef5b7cc2a740f79ac5b
 w
 Gfoodie-service/src/main/java/com/imooc/service/impl/StuServiceImpl.java,4\8\48dac488fcd62ea9279cdde2651bc4c43b39e2c6
-n
->foodie-service/src/main/java/com/imooc/service/StuService.java,f\5\f577c0873631973c279cee154d847fbcd071dd3d
-c
-3foodie-api/src/main/java/com/imooc/Application.java,e\b\ebed2b93653ac6b0de831bba63cbfce8060eeebe
